@@ -1,1 +1,12 @@
+def finalgrade(hw:int ,assess:int ,fa:int ):
+    percent = ((hw+assess+fa)/175)*100
+    return percent
+name=input("Enter your name:")
+homew=int(input("Enter your homework result:"))
+ass=int(input("Enter assessment result:"))
+final=int(input("Enter final exam results:"))
+percent=finalgrade(homew,ass,final)
+
+print(name + " your final percentage is:" + str(percent))
+#QA COMMUNITY TASK
 
