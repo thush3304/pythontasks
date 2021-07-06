@@ -31,3 +31,25 @@ isbn=list(input("Enter ISBN value:"))
 checksum=remainder(isbn)
 print(checksum)
 #ISBN
+def remainder(ISBN):
+    list1=[]
+    for digit_str in ISBN:
+        for digit in digit_str:
+            list1.append(digit)
+    total=0 
+    n=0
+    for n in range(len(list1)):
+        
+        if n/2==0:
+            total=int(total)+int(list1[n])
+        else:
+            total=total+(int(list1[n])*3)
+        n=int(n)+1
+    remain=total%10
+    result=10-remain
+    return result
+
+isbn=list(input("Enter ISBN value:"))
+checksum=remainder(isbn)
+print(checksum)
+#updated ISBN
